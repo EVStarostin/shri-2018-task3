@@ -1,0 +1,1015 @@
+@media screen and (min-width:600px){	
+	/*resetting margin, paddings, border*/
+	* {
+		margin: 0;
+		padding: 0;
+		border: none;
+		text-decoration: none;
+	}
+
+	/*fonts*/
+	@font-face {
+	    font-family: HelveticaNeue-Medium; /* Гарнитура шрифта */
+	    /*src: url(fonts/HelveticaNeue-Medium/HelveticaNeue-Medium.ttf); /* Путь к файлу со шрифтом */
+	    src: 	url("fonts/HelveticaNeue-Medium/HelveticaNeue-Medium.ttf") format("ttf"),
+	    		url("fonts/HelveticaNeue-Medium/HelveticaNeue-Medium.woff") format("woff"),
+	        	url("fonts/HelveticaNeue-Medium/HelveticaNeue-Medium.eot") format("eot");
+	}
+	@font-face {
+		font-family: HelveticaNeue-Bold; /* Гарнитура шрифта */
+	    /*src: url(fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.ttf); /* Путь к файлу со шрифтом */
+	    src: 	url("fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.ttf") format("ttf"),
+	    		url("fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.woff") format("woff"),
+	        	url("fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.eot") format("eot");
+	}
+	@font-face {
+		font-family: HelveticaNeue; /* Гарнитура шрифта */
+	    /*src: url(fonts/HelveticaNeue-Regular/HelveticaNeue.ttf); /* Путь к файлу со шрифтом */
+	    src: 	url("fonts/HelveticaNeue-Regular/HelveticaNeue.ttf") format("ttf"),
+	    		url("fonts/HelveticaNeue-Regular/HelveticaNeue.woff") format("woff"),
+	        	url("fonts/HelveticaNeue-Regular/HelveticaNeue.eot") format("eot");
+	}
+
+
+
+	/*----- Шапка -----*/
+	.header__main {
+		box-shadow: 0 -1px 0 0 #E9ECEF;
+	}
+	.header__main-content {
+		height: 71px;
+		max-width: 1280px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.header__logo {
+		position: absolute;
+		left: 24px;
+		top: 25px;
+	}
+	#header__create-meeting-btn {
+		position: absolute;
+		right: 24px;
+		top: 18px;
+		height: 36px;
+		width: 140px;
+		background: #007DFF;
+		border-radius: 4px;
+		font-family: HelveticaNeue-Medium,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #FFFFFF;
+		letter-spacing: 0;
+		text-align: center;
+		line-height: 36px;
+	}
+	#header__create-meeting-btn:hover {
+		background: #0059FF;
+		cursor: pointer;
+	}
+	#header__create-meeting-btn:active {
+		background: rgba(11,0,255,0.80);
+	}
+
+
+
+	/*----- Блок с датой и временем -----*/
+	.datetime__main {
+		box-shadow: 0 -1px 0 0 #E9ECEF;
+	}
+	.datetime__main-content {
+		height: 46px;
+		max-width: 1280px;
+		min-width: 1280px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.datetime__main-currentTime {
+		background: #007DFF;
+	    border-radius: 100px;
+	    width: 50px;
+	    height: 20px;
+	    font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+	    font-size: 11px;
+	    color: #FFFFFF;
+	    letter-spacing: 0.4px;
+	    line-height: 20px;
+	    position: absolute;
+	    text-align: center;
+	    top: 13px;
+	    left: 0;
+		z-index: 1;
+		display: none;
+	}
+	.datetime__main-content hr {
+		background: #007DFF;
+	    background-color: #007DFF;
+	    width: 1px;
+	    position: absolute;
+	    height: 0;
+	    left: 25px;
+	}
+	/*Дата*/
+	.datetime__date-wrapper {
+		position: relative;
+		width: 245px;
+		height: 100%;
+		padding: 0 25px;
+		font-family: HelveticaNeue-Medium,Helvetica,Arial,sans-serif;
+		font-size: 15px;
+		color: #000000;
+		letter-spacing: 0;
+		box-sizing: border-box;
+	    line-height: 46px;
+	    text-align: center;
+	    float: left;
+	}
+	.datetime__date-wrapper span:hover {
+		cursor: default;
+		color: #0070E0;
+	}
+	.datetime__date-wrapper span.clicked {
+		color: #0070E0;
+	}
+
+	div.arrow {
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		background: #E9ECEF;
+		border-radius: 100px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		cursor: pointer;
+	}
+	div.arrow:hover {
+		background: #98A9B9;
+		cursor: pointer;
+	}
+	div.arrow:active {
+		background: rgba(0,0,0,0.12);
+	}
+	#rightArrow {
+		right: 25px;
+	}
+	div.arrow img {
+	    position: absolute;
+	    margin: auto;
+	    left: 0;
+	    right: 0px;
+	    top: 0;
+	    bottom: 0;
+	}
+	.noselect {
+	  -webkit-touch-callout: none; /* iOS Safari */
+	    -webkit-user-select: none; /* Safari */
+	     -khtml-user-select: none; /* Konqueror HTML */
+	       -moz-user-select: none; /* Firefox */
+	        -ms-user-select: none; /* Internet Explorer/Edge */
+	            user-select: none; /* Non-prefixed version, currently
+	                                  supported by Chrome and Opera */
+	}
+
+	/*Календарь*/
+	.calendar__wrapper {
+		position: absolute;
+		z-index: 1;
+	    width: 604px;
+	    height: 232px;
+	    background: #FFFFFF;
+	    box-shadow: 0 1px 8px 0 rgba(0,44,92,0.28);
+	    border-radius: 4px;
+	    padding: 16px;
+	    box-sizing: border-box;
+	    display: none;
+	}
+	.calendar__container {
+		background: #E9ECEF;
+		border-radius: 4px;
+		width: 100%;
+		height: 100%
+	}
+	.calendar__container > div {
+		text-align: center;
+	    width: 180px;
+	    float: left;
+	    padding: 5px;
+	    line-height: 35px;
+	}
+	.calendar__container > div > div {
+		display: table;
+	    margin: 20px auto;
+	}
+	.calendar__container > div > div > div {
+		display: table-row;
+	}
+	.calendar__container > div > div > div > div {
+		display: table-cell;
+	    width: 25px;
+	    height: 25px;
+	    line-height: 25px;
+	    text-align: center;
+	    vertical-align: middle;
+	    font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+	}
+	.calendar__container > div > div > div > div:hover {
+		color: #0070E0;
+		cursor: default;
+	}
+	/*Календарь*/
+
+	/*Время*/
+	.datetime__time-wrapper {
+		height: 100%;
+		line-height: 46px;
+		padding-left: 236px;
+	}
+	.datetime__time {
+	    float: left;
+	    font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+	    font-size: 11px;
+	    letter-spacing: 0.4px;
+	    width: 66px;
+	    text-align: right;
+	    position: relative;
+	}
+	.datetime__time.first {
+		margin-left: -28px;
+	}
+	.datetime__time hr {
+		background: rgba(19,100,205,0.10); /* Цвет линии для остальных браузеров */
+	    background-color: rgba(19,100,205,0.10); /* Цвет линии для браузера Firefox и Opera */
+	    width: 1px;
+	    position: absolute;
+	    left: 58px;	
+	    height: 0;
+	}
+
+
+
+	/*----- Основной блок контента -----*/
+	.content__main {
+		box-shadow: 0 -1px 0 0 #E9ECEF;
+	}
+	.content__main-content {
+		max-width: 1280px;
+		min-width: 1280px;
+		margin: 0 auto;	
+		height: 600px;
+	}
+	/*Таблица*/
+	.content__table {
+		display: table;
+	}
+	.content__row {
+		display: table-row;
+	}
+	.content__cell {
+		display: table-cell;
+	}
+	.cell-floor {
+		height: 13px;
+		padding-top: 21px;
+		padding-bottom: 4px;
+		width: 220px;
+		padding-left: 25px;
+		text-transform: uppercase;
+		font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+		font-size: 11px;
+		color: #858E98;
+		letter-spacing: 0.4px;
+		vertical-align: bottom;
+	}
+	.schedulefloor {
+		height: 13px;
+		padding-top: 21px;
+		padding-bottom: 4px;
+		padding-right: 14px;
+		padding-left: 31px;
+		background: #F6F7F9;
+		width: 990px;	
+	}
+	.room {
+		height: 44px;
+		padding-bottom: 8px;
+		padding-left: 25px;
+		width: 220px;
+		vertical-align: middle;
+		padding-left: 25px;
+	}
+	.scheduleroom {
+		height: 44px;
+		padding-bottom: 8px;
+		padding-left: 31px;
+		padding-right: 14px;
+		vertical-align: middle;
+		background: #F6F7F9;
+		width: 990px;
+	}
+	.row-floor:not(:first-of-type) .cell-floor, .row-floor:not(:first-of-type) .schedulefloor{
+	 	padding-top: 13px;
+	}
+	.room-name {
+		font-family: HelveticaNeue-Medium,Helvetica,Arial,sans-serif;
+		font-size: 15px;
+		line-height: 17px;
+	}
+	.room-capacity {
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		line-height: 17px;
+	}
+	.schedule-block {
+		height: 28px;
+		width: 66px;
+		float: left;
+	}
+	.free {
+		background: white;
+	}
+	.schedule-block.free:hover {
+		background: #1D54FE;
+		border-radius: 2px;
+		cursor: pointer;
+		text-align: center;
+		line-height: 28px;
+		color: #FFFFFF;
+		font-size: 25px;
+		font-family: arial;
+	}
+	.schedule-block.free:hover:before {
+	    content: "+"; /* Добавляем перед текстом открывающую кавычку */
+	}
+	.schedule-block.free:active {
+		background: #1D00FE;
+		border-radius: 2px;
+	}
+	.taken {
+		background: #D5DFE9;
+		position: relative;
+	}
+	.schedule-block.taken:hover {
+		background: #98A9B9;
+	}
+	/*.schedule-block.taken:hover .tooltip {
+		display: block;
+	}*/
+	.schedule-block.taken:active {
+		background: #8594a2;
+	}
+	.packed {
+		color: #858E98;
+	}
+	.selectedRoom {
+		color: #0070E0;
+	}
+
+	/*Tooltip при клике на встречу на сетке бронирования (начало блока css)*/
+	.tooltip {
+		width: 338px;
+	    height: 113px;
+	    background: #FFFFFF;
+	    box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+	    border-radius: 8px;
+	    position: absolute;
+	    top: 28px;
+	    left: -136px;
+	    display: none;
+	    padding-left: 16px;
+	    box-sizing: border-box;
+	    z-index: 1;	
+	}
+	.tooltip__event-title {
+		height: 24px;
+	    margin-top: 12px;
+	    font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+	    font-size: 15px;
+	    color: #000000;
+	    letter-spacing: 0;
+	    line-height: 24px;
+	}
+	.tooltip__event-dateAndTime{
+		height: 17px;
+		margin-top: 2px;
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		letter-spacing: 0;
+		line-height: 17px;
+	}
+	.tooltip__event-users {
+	    height: 24px;
+	    margin-top: 16px;
+	    font-family: Helvetica,HelveticaNeue,Arial,sans-serif;
+	    font-size: 13px;
+	    color: #000000;
+	    letter-spacing: 0;
+	    line-height: 24px;
+	    padding-left: 32px;
+	}
+	.tooltip__event-users span {
+		font-family: Helvetica,HelveticaNeue,Arial,sans-serif;
+		font-size: 13px;
+		color: #989A9C;
+		letter-spacing: 0;
+		line-height: 17px;
+	}
+	.tooltip__event-users img {
+	    width: 24px;
+	    height: 24px;
+	    position: absolute;
+	    left: 16px;
+	    border-radius: 12px;
+	}
+	.block:hover .tooltip {
+		display: block;
+	}
+	.tooltip::after {
+	   	content: '';
+	    top: -20px;
+	    left: 50%;
+	    border: solid transparent;
+	    height: 0;
+	    width: 0;
+	    position: absolute;
+	    pointer-events: none;
+	    border-color: transparent;
+	    border-bottom-color: #ffffff;
+	    border-width: 10px;
+	    margin-left: -10px;
+	}
+	.tooltip .edit {
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		line-height: 24px;
+		text-align: center;
+		background: #E9ECEF;
+		border-radius: 100px;
+		top: 8px;
+		right: 8px;
+	}
+	.tooltip .edit img {
+	    opacity: 0.43;
+	}
+	.tooltip .edit:hover {
+	    cursor: pointer;
+	}
+	.tooltip .edit:hover img {
+	    opacity: 1;
+	}	
+	/*Tooltip при клике на встречу на сетке бронирования (конец блока css)*/
+
+	/*Pop-up message Встреча создана*/
+	.fixed-overlay-create {
+	    position: fixed;
+	    overflow: auto;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0,0,0,0.5);
+	    display: none;
+	    z-index: 1;
+	}
+
+	.modal {
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -222px;
+	    margin-top: -126px;
+	}
+
+	.popupMeetingCreated__main {
+		width: 444px;
+		height: 252px;
+		background: #FFFFFF;
+		box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+		border-radius: 8px;
+		text-align: center;
+	}	
+	.popupMeetingCreated__main img {
+		width: 40px;
+		height: 40px;
+		margin-top: 32px;
+	}
+	.popupMeetingCreated__main .meetingCreated {
+		font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+		font-size: 20px;
+		color: #000000;
+		letter-spacing: 0;
+		line-height: 24px;
+		margin-top: 17px;
+	}
+	.popupMeetingCreated__main .dateTime {
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 15px;
+		color: #000000;
+		letter-spacing: 0;
+		line-height: 17px;
+		margin-top: 8px;
+	}
+	.popupMeetingCreated__main .roomFloor {
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 15px;
+		color: #000000;
+		letter-spacing: 0;
+		line-height: 17px;
+		margin-top: 6px;
+	}
+	.popupMeetingCreated__main button {
+		background: #007DFF;
+		border-radius: 4px;
+		font-family: HelveticaNeue-Medium,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #FFFFFF;
+		margin-top: 24px;
+		width: 84px;
+		height: 36px;
+	}
+	.popupMeetingCreated__main button:hover {
+		cursor: pointer;
+	}	
+	/*Pop-up message Встреча создана*/
+
+
+
+	/* ---------- editmeeting.html ---------- */
+	div.wrapper {
+		box-shadow: 0 -1px 0 0 #E9ECEF;
+	}
+
+	#newMeetingMain {
+		height: 498px;
+		max-width: 1280px;
+		margin: 0 auto;
+		min-width: 1280px;
+	}
+
+	#content {
+	    padding-top: 31px;
+	    margin: 0 auto;
+	    width: 872px;
+	}
+
+	div#titleLine {
+		position: relative;
+	} 
+
+	div#titleLine span#title {
+		font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+		font-size: 20px;
+		color: #000000;
+		letter-spacing: 0;
+	}
+
+	div#titleLine span#close {
+		display: inline-block;
+		background: #E9ECEF;
+		border-radius: 100px;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+	    right: 0;
+	}
+	div#titleLine span#close:hover {
+		cursor: pointer;
+		background: #98a9b9;
+	}
+	div#titleLine span#close:active {
+		cursor: pointer;
+		background: rgba(0,0,0,0.12);
+	}
+
+	span#close img {
+	    margin: 0 auto;
+	    margin-left: 7px;
+	    margin-top: 7px;
+	}
+
+	div.newMeetingTable1 {
+		display: table;
+		margin-top: 20px;
+	}
+
+	div.newMeetingRow1 {
+		display: table-row;
+		font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		letter-spacing: 0;
+		height: 22px;
+	}
+	div.newMeetingCell {
+		display: table-cell;
+	}
+	div.newMeetingCell input:focus {
+		background: #FFFFFF;
+		border: 2px solid #007DFF;
+		border-radius: 4px;
+	}
+	.cell1 {
+		width: 420px;
+	}
+	.cell2 {
+		width: 238px;
+		padding-left: 32px;
+	}
+	.cell3 {
+		width: 72px;
+		padding-left: 16px;
+	}
+	.cell4 {
+		width: 22px;
+	}
+	.cell5 {
+		width: 72px;
+	}
+
+	div.newMeetingRow2 {
+		display: table-row;
+	}
+	.cell6 {
+		width: 420px;
+	}
+	div.cell6 input {
+		box-sizing: border-box;
+		border: 2px solid #E9ECEF;
+		border-radius: 4px;
+		width: 420px;
+		height: 38px;
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		letter-spacing: 0.47px;
+		padding-left: 10px;
+	    padding-right: 10px;
+	}
+	.cell7 {
+		width: 238px;
+		padding-left: 32px;
+	}
+	div.cell7 input {
+		box-sizing: border-box;
+		border: 2px solid #E9ECEF;
+		border-radius: 4px;
+		width: 210px;
+		height: 38px;
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		letter-spacing: 0.47px;
+		padding-left: 10px;
+	    padding-right: 10px;
+	}
+	.cell8 {
+		width: 72px;
+		padding-left: 16px;
+	}
+	div.cell8 input {
+		box-sizing: border-box;
+		border: 2px solid #E9ECEF;
+		border-radius: 4px;
+		width: 90px;
+		height: 38px;
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		letter-spacing: 0.47px;
+		padding-left: 10px;
+	    padding-right: 10px;
+	}
+	.cell9 {
+		width: 22px;
+		text-align: center;
+		font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		letter-spacing: 0.47px;
+	}
+	.cell10 {
+		width: 72px;
+	}
+	div.cell10 input {
+		box-sizing: border-box;
+		border: 2px solid #E9ECEF;
+		border-radius: 4px;
+		width: 90px;
+		height: 38px;
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		letter-spacing: 0.47px;
+		padding-left: 10px;
+	    padding-right: 10px;
+	}
+
+	div.newMeetingTable2 {
+		display: table;
+		margin-top: 24px;
+	}
+
+	.cell11 {
+	    width: 420px;
+	}
+	div.cell11 input {
+		box-sizing: border-box;
+		border: 2px solid #E9ECEF;
+		border-radius: 4px;
+		width: 420px;
+		height: 38px;
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		letter-spacing: 0.47px;
+		padding-left: 10px;
+	    padding-right: 10px;
+	}
+
+	.cell12 {
+	    width: 420px;
+	    padding-left: 32px;
+	    height: 38px;
+	    vertical-align: top;
+	}
+	div.cell12 div#room {
+		display: block;
+		box-sizing: border-box;
+		border-radius: 4px;
+		width: 100%;
+		padding-left: 10px;
+	    padding-right: 10px;
+	    background: #007DFF;
+		line-height: 38px;
+		display: none;
+	}
+	div.cell12 div#room img {
+		float: right;
+	    margin-right: 5px;
+	    margin-top: 14px;
+	}
+	div.cell12 div#room img:hover {
+		cursor: pointer;
+	}
+
+	#roomTime {
+		font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #FFFFFF;
+		letter-spacing: 0;
+		line-height: 17px;
+	}
+	#roomFloor {
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #FFFFFF;
+		letter-spacing: 0;
+		line-height: 17px;
+		margin-left: 16px;
+	}
+	.footer__wrapper {
+		box-shadow: 0 -1px 0 0 #E9ECEF;
+		height: 76px;
+	}
+	.footer {
+		text-align: center;
+		max-width: 1280px;
+		min-width: 1280px;
+		margin: 0 auto;
+	}
+	.footer button {
+		height: 36px;
+		background: #E9ECEF;
+		border-radius: 4px;
+		font-family: HelveticaNeue-Medium,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		letter-spacing: 0;
+		margin-top: 20px;
+	}
+	.footer button:hover {
+		background: #dde0e4;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	.footer button:active {
+		background: #c7cdd3;
+	}	
+	.footer button.cancel {
+		width: 80px;
+	}
+	.footer button.delete {
+		width: 140px;
+		margin-left: 16px;
+	}
+	.footer button.save {
+		width: 101px;
+		margin-left: 16px;
+	}
+	.footer button.createmeeting {
+		width: 140px;
+		margin-left: 16px;
+		background: #007DFF;
+		border-radius: 4px;
+		font-family: HelveticaNeue-Medium,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #FBF5F5;
+		letter-spacing: 0;
+	}
+	.footer button.createmeeting:hover {
+		background: #0059FF;
+	}
+	.footer button.createmeeting:active {
+		background: #0B00FF
+	}
+
+	.dropdown__Users {
+		width: 420px;
+		max-height: 136px;
+		background: #FFFFFF;
+		box-shadow: 0 1px 10px 0 rgba(0,44,92,0.28);
+		border-radius: 4px;
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		letter-spacing: 0;
+		overflow: auto;
+	}
+	.dropdown__Users-line {
+		height: 34px;
+		line-height: 34px;
+	}
+	.dropdown__Users-line img {
+		margin-left: 16px;
+		margin-right: 8px;
+		border-radius: 12px;
+		width: 24px;
+		height: 24px;
+		vertical-align: middle;
+	}
+	.dropdown__Users-line:hover {
+		background: #F6F7F9;
+		cursor: default;
+	}
+	.selected__Users {
+		width: 420px;
+		margin-top: 12px;
+	}
+	.selected__Users-items {
+		height: 24px;
+		background: #E9ECEF;
+		border-radius: 16px;
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		letter-spacing: 0;
+		line-height: 17px;
+		line-height: 24px;
+		display: inline-block;
+		margin-top: 8px;
+		margin-right: 8px;
+	}
+	.selected__Users img.userAvatar {
+		width: 24px;
+		height: 24px;
+		border-radius: 12px;
+		vertical-align: middle;
+		margin-right: 8px;
+		margin-top: -1px;
+	}
+	.selected__Users img.closeBtn {
+		width: 9.1px;
+		height: 9.1px;
+		border-radius: 100px;
+		vertical-align: middle;
+		margin-right: 8px;
+		margin-left: 15px;
+	}
+	.selected__Users img.closeBtn:hover {
+		cursor: pointer;
+	}	
+
+	.recommendedrooms {
+		width: 420px;
+		font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		letter-spacing: 0;
+		margin-top: 24px;
+	}
+	.recommendedrooms__room {
+		width: 100%;
+		height: 37px;
+		line-height: 37px;
+		background: #E9ECEF;
+		border-radius: 4px;
+		margin-top: 8px;
+	}
+	.recommendedrooms__room:first-of-type {
+		margin-top: 0;
+	}
+	.recommendedrooms__room:hover {
+	    border: 2px solid #007DFF;
+	    box-sizing: border-box;
+	    cursor: default;
+	}
+	.recommendedrooms__room-time {
+		font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+		margin-left: 10px;
+		margin-right: 16px;
+	}
+	.recommendedrooms__room-titleANDfloor {
+		font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+	}
+
+	/*Pop-up message Встреча будет удалена*/
+	.fixed-overlay-delete {
+	    position: fixed;
+	    overflow: auto;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0,0,0,0.5);
+	    display: none;
+	}
+
+	.modal {
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -222px;
+	    margin-top: -126px;
+	}
+	.popupMeetingDelete__main {
+		width: 444px;
+		height: 252px;
+		background: #FFFFFF;
+		box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+		border-radius: 8px;
+		text-align: center;
+	}	
+	.popupMeetingDelete__main img {
+		width: 40px;
+		height: 40px;
+		margin-top: 32px;
+	}
+	.popupMeetingDelete__main .meetingCreated {
+		width: 320px;
+		font-family: HelveticaNeue-Bold,Helvetica,Arial,sans-serif;
+		font-size: 20px;
+		color: #000000;
+		letter-spacing: 0;
+		line-height: 24px;
+		margin-top: 17px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.popupMeetingDelete__main button {
+		background: #E9ECEF;
+		border-radius: 4px;
+		font-family: HelveticaNeue-Medium,Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		color: #000000;
+		margin-top: 24px;
+		height: 36px;
+	}
+	button.delete {
+		width: 86px;
+		margin-left: 16px;
+	}
+	button.cancel {
+		width: 80px;
+	}
+	.popupMeetingDelete__main button:hover {
+		cursor: pointer;
+	}	
+	/*Pop-up message Встреча удалена*/
+
+	/*Стилизация скролл-бара*/
+	.dropdown__Users::-webkit-scrollbar{
+	    width: 8px;
+	}
+	.dropdown__Users::-webkit-scrollbar-thumb{
+	    border-width:1px 1px 1px 2px;
+	    border-color: #777;
+	    background-color: #aaa;
+	    border-radius: 4px;
+	}
+	.dropdown__Users::-webkit-scrollbar-thumb:hover{
+	    border-width: 1px 1px 1px 2px;
+	    border-color: #555;
+	    background-color: #777;
+	}
+	.dropdown__Users::-webkit-scrollbar-track{
+	    border-width: 0;
+	    border-radius: 4px;
+	}
+	.dropdown__Users::-webkit-scrollbar-track:hover{
+	    border-left: solid 1px #aaa;
+	    background-color: #eee;
+	}
+	/*Стилизация скролл-бара*/
+
+	/* ---------- newmeeting.html ---------- */
+
+
+}

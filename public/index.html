@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Яндекс Переговорки - главная</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"> -->
+	<script src="scripts/task2_index.js"></script>
+	<script src="scripts/task3_index.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="mobilestyle.css">
+</head>
+<body>
+	<!-- Шапка -->
+	<div class="header__main">
+		<div class="header__main-content">
+			<div class="header__logo">
+				<a href="index.html"><img src="assets/logo.svg" alt="Яндекс Переговорки"></a>
+			</div>
+			<button id="header__create-meeting-btn">
+				Создать встречу
+			</button>
+		</div>
+	</div>
+	<!-- Шапка -->
+	
+	 <!-- Блок с датой и временем -->
+      <div class="datetime__main">
+        <div class="datetime__main-content">
+
+          <div class="datetime__main-currentTime">11:05<hr></div>
+
+          <div class="datetime__date-wrapper">
+            <div id="leftArrow" class="arrow noselect"><img src="assets/arrow2.svg" alt=""></div>
+            <span data-day="14" data-month="12" data-year="2017"></span>
+            <div id="rightArrow" class="arrow noselect"><img src="assets/arrow.svg" alt=""></div>
+         
+          <!-- Календарь -->
+		  <div class="calendar__wrapper">
+			<div class="calendar__container">
+			  <div data-month="12" data-year="2017">
+				Декабрь 2017
+				<div>
+				  <div>
+					<div></div><div></div><div></div><div></div><div>1</div><div>2</div><div>3</div>
+				  </div>
+				  <div>
+				    <div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
+				  </div>
+				  <div>
+					<div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div>
+				  </div>
+				  <div>
+				    <div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
+				  </div>
+				  <div>
+					<div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
+				  </div>
+				</div>
+			  </div>
+			  <div data-month="1" data-year="2018">
+				Январь 2018
+				<div>
+				  <div>
+					<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
+			      </div>
+				  <div>
+					<div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div>
+				  </div>
+			      <div>
+					<div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div>
+				  </div>
+				  <div>
+					<div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div>
+				  </div>
+				  <div>
+					<div>29</div><div>30</div><div>31</div><div></div><div></div><div></div><div></div>
+				  </div>
+				</div>
+			  </div>
+			  <div data-month="2" data-year="2018">
+				Февраль 2018
+				<div>
+				  <div>
+					<div></div><div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div>
+				  </div>
+				  <div>
+					<div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
+				  </div>
+				  <div>
+					<div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
+				  </div>
+				  <div>
+					<div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
+				  </div>
+				  <div>
+					<div>26</div><div>27</div><div>28</div><div></div><div></div><div></div><div></div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <!-- Календарь -->
+
+          </div>
+          <div class="datetime__time-wrapper">
+            <div class="datetime__time first">8:00<hr></div>
+            <div class="datetime__time">9<hr></div>
+            <div class="datetime__time">10<hr></div>
+            <div class="datetime__time">11<hr></div>
+            <div class="datetime__time">12<hr></div>
+            <div class="datetime__time">13<hr></div>
+            <div class="datetime__time">14<hr></div>
+            <div class="datetime__time">15<hr></div>
+            <div class="datetime__time">16<hr></div>
+            <div class="datetime__time">17<hr></div>
+            <div class="datetime__time">18<hr></div>
+            <div class="datetime__time">19<hr></div>
+            <div class="datetime__time">20<hr></div>
+            <div class="datetime__time">21<hr></div>
+            <div class="datetime__time">22<hr></div>
+            <div class="datetime__time">23<hr></div>
+          </div>
+        </div>
+      </div>
+      <!-- Блок с датой и временем -->
+
+      <!-- Сетка бронирования -->
+      <div class="content__main">
+        <div class="content__main-content">
+          <div class="content__table">  
+          <!-- Заполняется динамически js-скриптом -->     
+          </div>
+        </div>
+      </div>
+      <!-- Сетка бронирования -->
+
+    <!-- Pop-up message Встреча создана -->    
+    <div class="fixed-overlay-create">
+      <div class="modal">
+          <div class="popupMeetingCreated__main">  
+            <img src="assets/emoji2.png">  
+            <div class="meetingCreated">Встреча создана!</div>
+            <div class="dateTime">14 декабря, 15:00—17:00</div>
+            <div class="roomFloor">Готем · 4 этаж</div>
+            <button>Хорошо</button>
+          </div>
+      </div>
+    </div>    
+    <!-- Pop-up message Встреча создана -->  
+	
+</body>
+</html>
